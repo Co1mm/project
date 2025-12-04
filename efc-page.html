@@ -53,7 +53,7 @@
 	  </div>
 	</nav>
 	<h1> Eco-Friendly Construction </h1>
-	<div class="section1">
+	<div id="section1-efc">
 		<marquee behavior="truespeed" scrolldelay="10">
 			<img src="images/road-construction.jpg" alt="road construction" class="efcImg1"> <!-- slixed on Pixabay -->
 			<img src="images/light-bulb.jpg" alt="light bulb" class="efcImg1"> <!-- minka2507 on Pixabay -->
@@ -64,17 +64,17 @@
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque condimentum sem, a elementum velit tempor ut. Nam id mauris sit amet massa vestibulum posuere. In justo tellus, pulvinar vel dictum et, sollicitudin non lectus. Nunc sit amet commodo diam. Donec neque arcu, suscipit id purus id, porta dignissim urna. Curabitur iaculis erat vitae hendrerit auctor. In hac habitasse platea dictumst. Quisque vel massa porta felis placerat feugiat in nec velit. Quisque et commodo arcu. 
 		</p>
 	</div>
-	<div class="section2">
-		<img src="placeholder.jpg" alt="placeholder image" class="placeholderImage2"> 
+	<div id="section2-efc">
+		<img src="images/solar-panels.png" alt="solar panels" class="efcImg2"> <!-- jamal39 on Pixabay-->
 		<p class="para2">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque condimentum sem, a elementum velit tempor ut. Nam id mauris sit amet massa vestibulum posuere. In justo tellus, pulvinar vel dictum et, sollicitudin non lectus. Nunc sit amet commodo diam. Donec neque arcu, suscipit id purus id, porta dignissim urna. Curabitur iaculis erat vitae hendrerit auctor. In hac habitasse platea dictumst. Quisque vel massa porta felis placerat feugiat in nec velit. Quisque et commodo arcu. 
 		</p>
 	</div>
 	
-	<div id="section3">
+	<div id="section3-efc">
 		<h1>How to help.</h1>
 		<p>
-			Sign this petition to help promote eco-friendly development throughot the globe.
+			Please sign this petition to help promote eco-friendly development. All we need is your name and email.
 		</p>
 		<label>your name</label><br>
 		<input onkeyup="validateData();" id="userName" type="text" required><br>
@@ -104,7 +104,7 @@
 		}
 		
 		function authenticateUser(){
-			document.getElementById("section3").style.display = "none";
+			document.getElementById("section3-efc").style.display = "none";
 			document.getElementById("success").style.display = "block";
 			
 			var sMessage = "Thank you for signing the petition " + sUserName + ", we will sending updates via email about the project.";
