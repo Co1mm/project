@@ -54,10 +54,11 @@
 	</nav>
 	<h1> Eco-Friendly Construction </h1>
 	<div class="section1">
-		<marquee>
+		<marquee behavior="truespeed" scrolldelay="10">
 			<img src="images/road-construction.jpg" alt="road construction" class="efcImg1"> <!-- slixed on Pixabay -->
-			<img src="images/light-bulb.jpg" alt="light bulb" class="efcImg2"> <!-- minka2507 on Pixabay -->
-			<img src="images/construction-site.jpg" alt="construction site" class="efcImg3"> <!-- wal_172619 on Pixabay -->
+			<img src="images/light-bulb.jpg" alt="light bulb" class="efcImg1"> <!-- minka2507 on Pixabay -->
+			<img src="images/construction-site.jpg" alt="construction site" class="efcImg1"> <!-- wal_172619 on Pixabay -->
+			<img src="images/construction-site-2.jpg" alt="construction site 2" class="efcImg1"> <!-- x10 on Pixabay -->
 		</marquee>
 		<p class="para1">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque condimentum sem, a elementum velit tempor ut. Nam id mauris sit amet massa vestibulum posuere. In justo tellus, pulvinar vel dictum et, sollicitudin non lectus. Nunc sit amet commodo diam. Donec neque arcu, suscipit id purus id, porta dignissim urna. Curabitur iaculis erat vitae hendrerit auctor. In hac habitasse platea dictumst. Quisque vel massa porta felis placerat feugiat in nec velit. Quisque et commodo arcu. 
@@ -69,6 +70,57 @@
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque condimentum sem, a elementum velit tempor ut. Nam id mauris sit amet massa vestibulum posuere. In justo tellus, pulvinar vel dictum et, sollicitudin non lectus. Nunc sit amet commodo diam. Donec neque arcu, suscipit id purus id, porta dignissim urna. Curabitur iaculis erat vitae hendrerit auctor. In hac habitasse platea dictumst. Quisque vel massa porta felis placerat feugiat in nec velit. Quisque et commodo arcu. 
 		</p>
 	</div>
+	
+	<div id="section3">
+		<h1>How to help.</h1>
+		<p>
+			Sign this petition to help promote eco-friendly development throughot the globe.
+		</p>
+		<label>your name</label><br>
+		<input onkeyup="validateData();" id="userName" type="text" required><br>
+		<label>your email<lebel><br>
+		<input onkeyup="validateData();" id="email" type="email" requirted><br>
+		<button id="myBtn" onclick="authenticateUser()" disabled>log in</button>
+	</div>
+	<div id="success">
+		<p id="message"></p>
+		<button onclick="logout()">log out</button>
+	</div>
+	
+	<script> 
+			document.getElementById("success").style.display = "none";
+			var myTargetElementBtn = document.getElementById("myBtn");
+			var sUserName, sEmail;
+		
+		function validateData(){
+			sUserName = document.getElementById("userName").value;
+			sEmail = document.getElementById("email").value;
+			
+			if(sUserName.length > 1 && sEmail.length > 1){
+				myTargetElementBtn.disabled = false;
+			}else{
+				myTargetElementBtn.disabled = true;
+			}	
+		}
+		
+		function authenticateUser(){
+			document.getElementById("section3").style.display = "none";
+			document.getElementById("success").style.display = "block";
+			
+			var sMessage = "Thank you for signing the petition " + sUserName + ", we will sending updates via email about the project.";
+			document.getElementById("message").innerHTML = sMessage;
+		}
+		
+		function logout(){
+			document.getElementById("sectrion3").style.display = "block";
+			document.getElementById("success").style.display = "none";
+			document.getElementById("userName").vaule = "";
+		}
+	</script>
+	
+	
+	
+	
 	<footer class="footer">
 		<section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
 			<div class="me-5 d-none d-lg-block">
