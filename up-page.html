@@ -53,7 +53,21 @@
 	</nav>
 	<h1> Urban Planning </h1>
 	<div id="section1-up">
-		<img src="placeholder.jpg" alt="placeholder image" class="placeholderImage1"> 
+		<img src="images/arq-up.jpg" alt="model" id="upImg1"> 
+		
+		<script>
+			document.getElementById("upImg1").onmousemove = function(){
+			document.getElementById("upImg1").src = "images/arq-2-up.jpg";
+			}
+			document.getElementById("upImg1").onmouseout = function(){
+			document.getElementById("upImg1").src = "images/arq-up.jpg";
+			}
+
+
+		</script>
+		
+
+		
 		<p class="para1">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pellentesque condimentum sem, a elementum velit tempor ut. Nam id mauris sit amet massa vestibulum posuere. In justo tellus, pulvinar vel dictum et, sollicitudin non lectus. Nunc sit amet commodo diam. Donec neque arcu, suscipit id purus id, porta dignissim urna. Curabitur iaculis erat vitae hendrerit auctor. In hac habitasse platea dictumst. Quisque vel massa porta felis placerat feugiat in nec velit. Quisque et commodo arcu. 
 		</p>
